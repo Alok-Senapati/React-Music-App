@@ -2,4 +2,4 @@
 
 This is a simple audio player app amde with React.
 
-### Deployed App Link :- https://react-wave-app.netlify.com
+### Deployed App Link :- https://react-wave-player.netlify.app/
