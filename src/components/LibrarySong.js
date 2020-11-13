@@ -6,6 +6,8 @@ const LibrarySong = ({
   setCurrentSong,
   setSongs,
   songs,
+  libraryStatus,
+  setLibraryStatus,
 }) => {
   const [clsName, setClsName] = useState("");
 
@@ -32,6 +34,9 @@ const LibrarySong = ({
     await setSongs(tempSongs);
 
     await setCurrentSong({ ...song, active: true });
+    if (window.outerWidth <= 856) {
+      setLibraryStatus(!libraryStatus);
+    }
   };
   return (
     <div onClick={setSongHandler} className={"library-song" + clsName}>

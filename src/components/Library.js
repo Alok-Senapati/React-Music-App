@@ -30,6 +30,8 @@ const Library = ({
             currentSong={currentSong}
             setSongs={setSongs}
             songs={songs}
+            libraryStatus={libraryStatus}
+            setLibraryStatus={setLibraryStatus}
           />
         ))}
       </div>
