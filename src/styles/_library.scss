@@ -1,0 +1,118 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  overflow-y: scroll;
+  background: rgb(168, 169, 247);
+  box-shadow: 5px 2px 50px rgb(194, 190, 190);
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+
+  h1 {
+    padding: 0.5rem;
+    color: black;
+  }
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.library-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-library {
+  margin: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.close-library:active {
+  background-color: initial;
+}
+
+.close-library:hover {
+  background-color: initial;
+}
+
+.library-song {
+  padding: 1rem;
+  display: flex;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  img {
+    width: 30%;
+  }
+
+  &:hover {
+    background: rgb(145, 146, 208);
+  }
+}
+
+.song-description {
+  padding: 0.5rem 1rem;
+  h2 {
+    font-size: 18px;
+    color: black;
+  }
+  h3 {
+    font-size: 14px;
+  }
+}
+
+.selected-song {
+  background-color: rgb(71, 73, 201);
+  cursor: default;
+
+  &:hover {
+    background-color: rgb(71, 73, 201);
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .library {
+    width: 100%;
+  }
+  .library-song {
+    img {
+      width: 25%;
+    }
+  }
+  .song-description {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .library-song {
+    &hover {
+      background: initial;
+    }
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}

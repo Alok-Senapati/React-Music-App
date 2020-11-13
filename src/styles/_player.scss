@@ -1,0 +1,97 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20vh;
+  align-items: center;
+}
+
+.time-control {
+  display: flex;
+  width: 50%;
+  padding-top: 3rem;
+  input {
+    width: 100%;
+    padding: 1rem 0rem;
+    cursor: pointer;
+  }
+  p {
+    padding: 1rem;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.play-control {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 2rem;
+  svg {
+    cursor: pointer;
+  }
+  svg:active {
+    background-color: initial;
+  }
+  svg:focus {
+    background-color: initial;
+  }
+  input {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .time-control {
+    width: 80%;
+  }
+  .play-control {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .time-control {
+    width: 95%;
+
+    padding-top: 2rem;
+  }
+  .play-control {
+    padding-top: 1.5rem;
+    width: 90%;
+  }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  cursor: pointer;
+}
+
+*::-moz-range-thumb {
+  border-radius: 50%;
+  background-color: rgb(126, 127, 211);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+*::-moz-range-track {
+  height: 1px;
+  border: 0.5px solid rgb(146, 140, 140);
+  border-radius: 5px;
+}
+
+*::-ms-thumb {
+  border-radius: 50%;
+  background-color: rgb(126, 127, 211);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+*::-ms-track {
+  height: 1px;
+  border: 0.5px solid rgb(146, 140, 140);
+  border-radius: 5px;
+}
